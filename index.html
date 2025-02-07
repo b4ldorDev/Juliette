@@ -37,7 +37,8 @@
             <h2>Redes Sociales</h2>
             <div class="social-links">
                 <a href="https://www.instagram.com/juliette.b4nd/" target="_blank">Instagram</a>
-                <a href="https://soundcloud.com/user-483599245/sets/repe?si=8739b86ba5dc40e9b69216f150ebeb1b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank">SoundCloud</a>
+                <a href="https://soundcloud.com/user-483599245/sets/repe?si=8739b86ba5dc40e9b69216f150ebeb1b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                    target="_blank">SoundCloud</a>
                 <a href="https://www.youtube.com/watch?v=7SxKTNzoFAQ" target="_blank">YouTube</a>
             </div>
         </section>
@@ -46,20 +47,22 @@
             <h2>Videos en Vivo</h2>
             <div class="videos">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/iTUcCILmk0M?si=3df_AV0N5gh7fda-" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/iTUcCILmk0M" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/bJF_6dP1gZQ?si=UKIhK-8TjsToU41Y" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/bJF_6dP1gZQ" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/bJF_6dP1gZQ?si=HjPErJIhAr42FGaF" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/bJF_6dP1gZQ" frameborder="0" allowfullscreen></iframe>
                 </div>
-            </div>
         </section>
 
         <section id="repertoire">
             <h2>Repertorio</h2>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/4F2qB8AattAcKT4noCIqcd?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            <iframe style="border-radius:12px"
+                src="https://open.spotify.com/embed/artist/4F2qB8AattAcKT4noCIqcd?utm_source=generator" width="100%"
+                height="152" frameBorder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
             <ul class="repertorio">
                 <li> ¿Dónde estás? </li>
@@ -97,7 +100,7 @@
 
     <script>
         // JavaScript para funcionalidad adicional
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Calcular duración total del repertorio
             function calculateTotalDuration() {
                 // Aquí puedes agregar la lógica para calcular la duración total
@@ -124,7 +127,7 @@
     <script>
         // <![CDATA[  <-- For SVG support
         if ('WebSocket' in window) {
-            (function() {
+            (function () {
                 function refreshCSS() {
                     var sheets = [].slice.call(document.getElementsByTagName("link"));
                     var head = document.getElementsByTagName("head")[0];
@@ -143,7 +146,7 @@
                 var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
                 var address = protocol + window.location.host + window.location.pathname + '/ws';
                 var socket = new WebSocket(address);
-                socket.onmessage = function(msg) {
+                socket.onmessage = function (msg) {
                     if (msg.data == 'reload') window.location.reload();
                     else if (msg.data == 'refreshcss') refreshCSS();
                 };
