@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juliette</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Juliette</h1>
+        </header>
+
+        <section id="members">
+            <h2>Integrantes</h2>
+            <div class="members">
+                <div class="member-card">
+                    <h3>Nombre del Integrante 1</h3>
+                    <p>Guitarra Principal</p>
+                </div>
+                <div class="member-card">
+                    <h3>Nombre del Integrante 2</h3>
+                    <p>Bajo</p>
+                </div>
+                <!-- Agregar más member-cards según sea necesario -->
+            </div>
+        </section>
+
+        <section id="social">
+            <h2>Redes Sociales</h2>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">YouTube</a>
+            </div>
+        </section>
+
+        <section id="live-videos">
+            <h2>Videos en Vivo</h2>
+            <div class="videos">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- Agregar más video-containers según sea necesario -->
+            </div>
+        </section>
+
+        <section id="repertoire">
+            <h2>Repertorio</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/4F2qB8AattAcKT4noCIqcd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            <ul class="repertorio">
+                <li>Canción 1 - Artista Original</li>
+                <li>Canción 2 - Artista Original</li>
+                <!-- Agregar más canciones según sea necesario -->
+            </ul>
+
+            <div class="duration">
+                <p>Duración total del show: 120 minutos</p>
+            </div>
+        </section>
+
+        <section id="equipment">
+            <h2>Equipo</h2>
+            <ul class="equipment-list">
+                <li>Guitarra Eléctrica: Fender Stratocaster</li>
+                <li>Amplificador: Marshall JCM800</li>
+                <!-- Agregar más equipamiento según sea necesario -->
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript para funcionalidad adicional
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calcular duración total del repertorio
+            function calculateTotalDuration() {
+                // Aquí puedes agregar la lógica para calcular la duración total
+                return "120 minutos";
+            }
+
+            // Función para validar enlaces de redes sociales
+            function validateSocialLinks() {
+                const socialLinks = document.querySelectorAll('.social-links a');
+                socialLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        if (link.getAttribute('href') === '#') {
+                            e.preventDefault();
+                            alert('Enlace pendiente de actualizar');
+                        }
+                    });
+                });
+            }
+
+            validateSocialLinks();
+        });
+    </script>
+</body>
+
+</html>
